@@ -8,7 +8,7 @@
 
 ## Why we vendor instead of curl-installing
 
-The upstream install path is `curl -fsSL https://cli.brightdata.com/install.sh | bash`. We do not run this — it has no checksum, no signature, and would also drop skills into `~/.claude/skills/` outside the repo (defeating the shared-docs sync goal). Vendoring at a pinned SHA gives us: auditable diffs on every upstream pull, single source of truth that propagates via `.github/sync-config.yml` to 9 AiLine service repos, and reach into non-AiLine repos (ramen-bones, vibe-starter) via user-level symlinks created by `.claude/scripts/install-brightdata.sh`.
+The upstream install path is `curl -fsSL https://cli.brightdata.com/install.sh | bash`. We do not run this — it has no checksum, no signature, and would also drop skills into `~/.claude/skills/` outside the repo (defeating the shared-docs sync goal). Vendoring at a pinned SHA gives us: auditable diffs on every upstream pull, single source of truth in `shiniguchi/toolkit` that propagates to all 17 repos, plus reach into unsynced projects via the user-level symlinks created by `.claude/scripts/install-brightdata.sh`.
 
 Context: this repo migrated off a compromised `gsd-build/get-shit-done` plugin in commit `bcf1696` after the RokketSec audit flagged retained npm keys. Same hygiene applied here.
 
