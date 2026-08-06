@@ -1,4 +1,5 @@
 ---
+name: crawl-repos
 description: Crawl related repos (same org or explicit list) to gather complete project context
 ---
 

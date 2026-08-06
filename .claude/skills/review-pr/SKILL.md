@@ -1,4 +1,5 @@
 ---
+name: review-pr
 description: Holistic PR alignment - fix cross-file inconsistencies, delete abandoned code, refactor docs to KISS
 ---
 

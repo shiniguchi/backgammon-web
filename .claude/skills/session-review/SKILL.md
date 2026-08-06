@@ -1,4 +1,5 @@
 ---
+name: session-review
 description: Review current session's changes - validate, optimize, document
 ---
 

@@ -1,4 +1,5 @@
 ---
+name: create-pr-summary
 description: Generate PR description from branch commits and diffs
 ---
 
