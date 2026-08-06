@@ -1,10 +1,10 @@
 # Bright Data — Setup & Usage
 
-The 15 Bright Data skills are vendored in `.claude/skills/brightdata-*/` and propagate via `.github/sync-config.yml` to all 9 AiLine service repos. To use them locally — and from non-AiLine projects like `ramen-bones-analytics` or `toolkit` — each developer runs the bootstrap script once.
+The 15 Bright Data skills are vendored in `.claude/skills/brightdata-*/` and propagate from `shiniguchi/toolkit` to every repo. To use them locally — and from non-AiLine projects like `ramen-bones-analytics` or `toolkit` — each developer runs the bootstrap script once.
 
 ## One-time setup
 
-From the `shared-docs` repo root:
+From any repo that carries this bundle:
 
 ```bash
 .claude/scripts/install-brightdata.sh
