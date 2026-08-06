@@ -1,0 +1,5 @@
+{
+  "type": "commonjs",
+  "private": true,
+  "_comment": "Scopes .claude/hooks/*.js files as CommonJS, regardless of parent package.json. Required when the bootstrapped project declares \"type\": \"module\" at its root (e.g. SvelteKit, modern Next.js) — without this file, Node tries to load visual-verify-nudge.js as ESM and crashes on require(). The hook then silently exit-0s (per its own failure-mode design) and the PostToolUse reminder never reaches Claude. This file propagates to new projects via bootstrap.sh."
+}
