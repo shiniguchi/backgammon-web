@@ -4,7 +4,9 @@ The 15 Bright Data skills are vendored in `.claude/skills/brightdata-*/` and pro
 
 ## One-time setup
 
-From any repo that carries this bundle:
+Run it from your `toolkit` checkout. The script symlinks
+`~/.claude/skills/brightdata-*` at whichever repo it runs in, so pointing it at a
+project repo means the links break the day that project moves.
 
 ```bash
 .claude/scripts/install-brightdata.sh
