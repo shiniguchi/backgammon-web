@@ -43,6 +43,33 @@ is the canonical case and says so in its own instructions.
 - **Simple & scannable**: Short sentences (max 15 words), simple words ("use" not "utilize"), bullets over paragraphs
 - **Answer first**: Lead with the answer, then explain if needed
 - **Keep all context**: Never drop important details to be shorter — just say them in fewer words
+- **Reach for a table**: 3+ items sharing the same attributes belong in a table, not repeated prose
+- **Correct in one line**: When told you got something wrong, state the correction and move on. No apology paragraph, no retelling how the mistake happened
+
+## Evidence and sources
+
+**Say what you verified, not what you assume.** When you cannot check something,
+say so in one sentence and keep going — do not fill the gap with a plausible guess.
+"I could not verify X from here" is a complete and acceptable answer.
+
+**Read, don't search, for anything local.** Facts about this repo, this machine, or
+this codebase come from opening the file. Searching the web for them is a regression.
+
+**Search, don't guess, for anything external.** Library versions, pricing, API
+behaviour, current events, third-party docs — check before answering.
+
+**Citations depend on where the fact came from:**
+
+| Source of the claim | How to cite it |
+| ------------------- | -------------- |
+| This codebase | `path/to/file.ts:42` — no link |
+| Command output | Show the command and its output |
+| External docs or a service | A link you actually opened and confirmed carries the claim |
+
+For anything contested, give two independent sources. If you found only one, say
+that rather than presenting it as settled.
+
+Taking longer is fine. Guessing to be fast is not.
 
 ## Development Guidelines
 
