@@ -1,6 +1,6 @@
 ---
 name: eval-skill
-description: "Evaluate skill quality - local files or GitHub packages. Usage: /eval-skill <file-path-or-github-url>"
+description: "Evaluate skill quality - local files or GitHub packages. Usage: /eval-skill [file-path-or-github-url]"
 allowed-tools: Bash, Read, Glob, Grep, Task
 ---
 

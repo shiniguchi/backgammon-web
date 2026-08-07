@@ -1,6 +1,6 @@
 ---
 name: uiux-review
-description: "UI/UX design review using Chrome MCP. Screenshots pages, tests responsiveness, checks accessibility, inspects console errors. Outputs prioritized findings. Usage: /uiux-review <url-or-page>"
+description: "UI/UX design review using Chrome MCP. Screenshots pages, tests responsiveness, checks accessibility, inspects console errors. Outputs prioritized findings. Usage: /uiux-review [url-or-page]"
 allowed-tools: mcp__claude-in-chrome__tabs_context_mcp, mcp__claude-in-chrome__tabs_create_mcp, mcp__claude-in-chrome__navigate, mcp__claude-in-chrome__computer, mcp__claude-in-chrome__read_page, mcp__claude-in-chrome__find, mcp__claude-in-chrome__get_page_text, mcp__claude-in-chrome__javascript_tool, mcp__claude-in-chrome__resize_window, mcp__claude-in-chrome__read_console_messages, mcp__claude-in-chrome__read_network_requests, mcp__claude-in-chrome__form_input, Read
 context: fork
 ---
