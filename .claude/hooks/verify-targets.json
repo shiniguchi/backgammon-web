@@ -1,0 +1,52 @@
+{
+  "_comment": "TEMPLATE — customise after bootstrapping into a project. Patterns are case-insensitive substring matches. First match wins. Default URL covers most JS dev servers (Vite=5173, Next=3000, SvelteKit=5173). Replace with your project's DEV URL.",
+  "extensions": [".tsx", ".jsx", ".vue", ".svelte", ".astro", ".html", ".css", ".scss", ".sass", ".less"],
+  "excludePaths": [
+    "node_modules/",
+    ".next/",
+    ".svelte-kit/",
+    "dist/",
+    "build/",
+    ".storybook/",
+    "stories.tsx",
+    "stories.svelte",
+    ".test.",
+    ".spec.",
+    "tests/",
+    "__tests__/"
+  ],
+  "rules": [
+    { "pathContains": "src/app",        "url": "http://localhost:3000",  "name": "Next.js app router (replace if not Next)" },
+    { "pathContains": "src/pages",      "url": "http://localhost:3000",  "name": "Next.js pages (replace if not Next)" },
+    { "pathContains": "src/routes",     "url": "http://localhost:5173",  "name": "SvelteKit routes (replace if not SvelteKit)" }
+  ],
+  "defaultUrl": "http://localhost:5173",
+  "templates": {
+    "_comment": "TEMPLATE — per-change-type checklists used by visual-verify-nudge.js. Chrome MCP primary, Playwright fallback. Tab discipline: tabs_context_mcp first, reuse tab, never open a duplicate in the other MCP. Customise the 'data' steps below to point at your actual data source MCP (Postgres, Supabase, D1, Prisma, Drizzle, etc.).",
+    "visual": {
+      "steps": [
+        "Tab discipline: mcp__claude-in-chrome__tabs_context_mcp first → reuse a tab whose URL already matches; create new only if none. Never open a second tab in the other MCP.",
+        "Navigate (primary): mcp__claude-in-chrome__navigate to the dev server URL — fallback: mcp__playwright__browser_navigate",
+        "Capture: mcp__claude-in-chrome__get_page_text or read_page — fallback: mcp__playwright__browser_take_screenshot",
+        "Confirm visual change matches intent"
+      ]
+    },
+    "data": {
+      "steps": [
+        "Identify the data source (your DB / API endpoint) for the new field",
+        "Query the source via your DB MCP (e.g. mcp__postgres-dev__query, mcp__supabase__query, etc.) — confirm rows exist",
+        "Tab discipline: mcp__claude-in-chrome__tabs_context_mcp first → reuse the tab if already open",
+        "Navigate + capture: Chrome MCP primary (navigate + get_page_text/read_page), Playwright fallback (browser_navigate + browser_take_screenshot) — same tab",
+        "Verify rendered value matches source value"
+      ]
+    },
+    "interaction": {
+      "steps": [
+        "Tab discipline: mcp__claude-in-chrome__tabs_context_mcp first → reuse the tab if already open",
+        "Click / type: mcp__claude-in-chrome__form_input or shortcuts_execute — fallback: mcp__playwright__browser_click / browser_type",
+        "Errors: mcp__claude-in-chrome__read_console_messages — fallback: mcp__playwright__browser_console_messages",
+        "Capture post-interaction state in same tab"
+      ]
+    }
+  }
+}

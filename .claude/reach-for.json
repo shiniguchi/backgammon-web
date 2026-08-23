@@ -1,15 +1,71 @@
 {
   "_doc": "Data-driven reach-for table consumed by .claude/hooks/next-step-hint.js. Adding a new tool = appending one entry. Each row: signal (heuristic name), command (slash-command or skill to invoke), after_step (1=discuss, 2=plan, 3=execute, 4=qa, 5=ship; null=any). The hook picks rows whose after_step matches the just-completed step. Synced from github.com/shiniguchi/toolkit — edit there, not downstream.",
   "rows": [
-    { "signal": "frontend_new_surface", "command": "/uiux-review", "after_step": 1, "note": "new UI surface — review an existing page first for patterns to reuse" },
-    { "signal": "auth_or_secrets_or_sql", "command": "/qa-gate", "after_step": 4, "note": "phase touches auth, secrets, OWASP-relevant code, or SQL with user input" },
-    { "signal": "db_migration", "command": "request second-opinion review", "after_step": 4, "note": "DB schema change — get a second pair of eyes" },
-    { "signal": "pre_pr_taste_check", "command": "/review-pr", "after_step": 4, "note": "pre-landing diff review" },
-    { "signal": "pr_description_needed", "command": "/create-pr-summary", "after_step": 5, "note": "branch ready to open as a PR" },
-    { "signal": "stuck_root_cause_unclear", "command": "superpowers:systematic-debugging (if installed)", "after_step": null, "note": "bug appeared mid-build, root cause unclear" },
-    { "signal": "doc_only_or_rename", "command": "commit directly", "after_step": 0, "note": "doc-only / comment edit / variable rename — replaces full sequence" },
-    { "signal": "library_or_sdk_question", "command": "Context7 MCP query-docs (if installed)", "after_step": null, "note": "verify library/SDK/API behavior before coding" },
-    { "signal": "web_scraping_or_serp_or_competitive_intel", "command": "brightdata-agent-onboarding", "after_step": null, "note": "live web data — search, scrape, structured extraction, competitive analysis, SEO audit" },
-    { "signal": "session_wrapping_up", "command": "/session-review", "after_step": 5, "note": "validate, optimize and document what changed this session" }
+    {
+      "signal": "frontend_new_surface",
+      "command": "/uiux-review",
+      "after_step": 1,
+      "note": "new UI surface — review an existing page first for patterns to reuse"
+    },
+    {
+      "signal": "auth_or_secrets_or_sql",
+      "command": "/qa-gate",
+      "after_step": 4,
+      "note": "phase touches auth, secrets, OWASP-relevant code, or SQL with user input"
+    },
+    {
+      "signal": "db_migration",
+      "command": "request second-opinion review",
+      "after_step": 4,
+      "note": "DB schema change — get a second pair of eyes"
+    },
+    {
+      "signal": "pre_pr_taste_check",
+      "command": "/review-pr",
+      "after_step": 4,
+      "note": "pre-landing diff review"
+    },
+    {
+      "signal": "pr_description_needed",
+      "command": "/create-pr-summary",
+      "after_step": 5,
+      "note": "branch ready to open as a PR"
+    },
+    {
+      "signal": "stuck_root_cause_unclear",
+      "command": "superpowers:systematic-debugging (if installed)",
+      "after_step": null,
+      "note": "bug appeared mid-build, root cause unclear"
+    },
+    {
+      "signal": "doc_only_or_rename",
+      "command": "commit directly",
+      "after_step": 0,
+      "note": "doc-only / comment edit / variable rename — replaces full sequence"
+    },
+    {
+      "signal": "library_or_sdk_question",
+      "command": "Context7 MCP query-docs (if installed)",
+      "after_step": null,
+      "note": "verify library/SDK/API behavior before coding"
+    },
+    {
+      "signal": "web_scraping_or_serp_or_competitive_intel",
+      "command": "brightdata-agent-onboarding",
+      "after_step": null,
+      "note": "live web data — search, scrape, structured extraction, competitive analysis, SEO audit"
+    },
+    {
+      "signal": "session_wrapping_up",
+      "command": "/session-review",
+      "after_step": 5,
+      "note": "validate, optimize and document what changed this session"
+    },
+    {
+      "signal": "google_sheets_write",
+      "command": "use gws CLI (.claude/vendor/gws + sheets.json), not browser tools",
+      "after_step": null,
+      "note": "Sheets grid is canvas-rendered; browser automation falls back to screenshots (most expensive path). Build payload.json locally, one gws call."
+    }
   ]
 }
