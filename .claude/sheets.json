@@ -1,0 +1,8 @@
+{
+  "_doc": "Logical name -> Google Sheets target. Keeps spreadsheet IDs out of prompts. Write path: build payload.json locally, then one `gws sheets` call. Synced from toolkit.",
+  "targets": {
+    "matcha-business": { "spreadsheetId": "1iAxCO_pxdOP-fJ8vziebF9YqqMT-_YhJk9iuiRPiQFI", "name": "Matcha Base - Business Data (CONFIDENTIAL)" },
+    "matcha-cafe-leads": { "spreadsheetId": "1flUdsWwT4lbon-R4Xl0X_DY5cs-usWbOtsjfoaWcOgU", "name": "Matcha Base - Cafe Leads" },
+    "matcha-cost": { "spreadsheetId": "1Rkn6tld9WG8a1NPj6FKfo2BaHQus2lsc7WnL05DxUTc", "name": "Matcha Base - Cost" }
+  }
+}
