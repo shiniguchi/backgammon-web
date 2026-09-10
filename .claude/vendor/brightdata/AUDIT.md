@@ -3,7 +3,7 @@
 **Upstream:** https://github.com/brightdata/skills
 **Pinned SHA:** `071e9d4db77c8561e333799f25ea85f11f7b667d` (see `SHA`)
 **License:** MIT (preserved in `LICENSE`)
-**Vendored:** 2026-05-27 by Shin (iguchise@gmail.com)
+**Vendored:** 2026-05-27 by Shin (<founder-email>)
 **Skills count:** 15
 
 ## Why we vendor instead of curl-installing
