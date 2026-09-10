@@ -1,6 +1,7 @@
 ---
 name: refine-plan-100pct
 description: Refine any plan - upgrade from 60% to 100% quality using conversation context
+disable-model-invocation: true
 ---
 
 Your current plan is only 60% good. Revamp it to 100% professional quality using the context already in this conversation. Default to NOT reading codebases or querying databases — this is a fast critique pass.

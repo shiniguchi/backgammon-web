@@ -1,6 +1,7 @@
 ---
 name: deepsearch-propose-top2
 description: Deep research with extended thinking, propose top 2 plans (read-only, no code changes)
+disable-model-invocation: true
 ---
 
 Deep research this topic and think deeply before responding. Do NOT change any code.
