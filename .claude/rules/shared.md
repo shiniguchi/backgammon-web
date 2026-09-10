@@ -55,6 +55,20 @@ say so in one sentence and keep going — do not fill the gap with a plausible g
 **Read, don't search, for anything local.** Facts about this repo, this machine, or
 this codebase come from opening the file. Searching the web for them is a regression.
 
+**Carry the qualifier into the artifact, not just the reply.** When a figure or a
+verdict moves from a source into a table, a cell, or a config, its exclusions and its
+as-of date move with it — a note column, a source column, a dated label. "EUR 155" in a
+cell has nowhere to hold "excludes fuel surcharge", and by the time someone reads the
+cell the source is long gone.
+
+**A demanded output format never deletes a condition.** Asked for yes/no, one number, or
+a ranking on something a source only allows conditionally: break the format and add the
+clause. "Yes, if X" is the answer — "Yes" is wrong.
+
+**Zero, not-applicable, and not-researched are three different cells.** A 0 that means
+"genuinely none" and a 0 that means "never looked" are indistinguishable a week later,
+and the second one is a hole in the model wearing the first one's clothes.
+
 **Search, don't guess, for anything external.** Library versions, pricing, API
 behaviour, current events, third-party docs — check before answering.
 
